@@ -1,0 +1,171 @@
+/* Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
+/* All */
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: "Cairo", sans-serif;
+}
+/* Body */
+body {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-content: center;
+    gap: 20px;
+}
+/* All Buttons In This Page */
+button {
+    cursor: pointer;
+    border: none;
+    padding: 10px 20px !important;
+    border-radius: 3px;
+    color: #FFF;
+    background: #0070FF;
+}
+button:hover {
+    transition: ease 0.3s;
+    background: #0040FF;
+}
+/* Hide Class */
+.hide {
+    display: none;
+}
+/* Container */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 500px;
+    padding: 15px;
+    border: 3px solid #DDD;
+    background: #EEE;
+}
+.input {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+.input input {
+    flex-grow: 1;
+    border-radius: 3px;
+    border: 1px solid #0070FF;
+}
+.input input:focus {
+    outline: none;
+}
+.input input , .input button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    padding: 5px;
+    font-size: 20px;
+    font-weight: 600;
+}
+/* Second Container */
+.task-list {
+    width: 100%;
+}
+.task-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 12px;
+    margin: 10px;
+    border: 2px solid #DDD;
+    background: #FFF;
+}
+.task-item .icons {
+    display: flex;
+    align-items: center;
+}
+.task-item span {
+    font-size: 20px;
+    font-weight: 600;
+    padding: 0 10px;
+    margin: 5px 0;
+    border-radius: 3px;
+    color: #FFF;
+    background: #0070FF;
+}
+.task-item .icons i {
+    cursor: pointer;
+    font-size: 22px;
+    margin-right: 10px;
+    transition: 0.3s;
+}
+.task-item .icons i:last-child:hover {
+    color: red;
+}
+.task-item .icons .checked , .task-item .icons i:first-child:hover {
+    color: green;
+}
+/* Task PopUp And Delete Task Confirmation Popup */
+.type-task-popup , .confirmation-popup , .success-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
+    z-index: 1;
+}
+.type-task-popup > div , .confirmation-popup .popup-content , .success-popup > div {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    padding: 20px;
+    border-radius: 3px;
+    transform: translate(-50%,-50%);
+    background: #FFF;
+}
+.type-task-popup > div > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+.type-task-popup > div > div button {
+    width: 100px;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 0 5px !important;
+}
+.confirmation-popup > div {
+    text-align: center;
+}
+.confirmation-popup > div button {
+    width: 100px;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 10px;
+    padding: 0 5px !important;
+}
+.success-popup > div {
+    font-size: 20px;
+    font-weight: 700;
+    color: green;
+}
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        width: 375px;
+    }
+}
+@media (max-width: 400px) {
+    .container {
+        width: 350px;
+    }
+    .input input, .input button {
+        font-size: 18px;
+    }
+}

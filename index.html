@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" href="Images/JavaScript.png">
+    <link rel="stylesheet" href="style.css">
+    <title>JavaScript To-Do Application</title>
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            <h1>To-Do Application</h1>
+        </div>
+        <div class="input">
+            <input type="text" id="typeInput" placeholder="Type Your Task Here">
+            <button type="button" id="addBtn">Add Task</button>
+        </div>
+    </div>
+    <div class="container">
+        <div class="title">
+            <h2>You Don't Have Tasks To Do</h2>
+        </div>
+        <div class="task-list"></div>
+        <div class="type-task-popup hide" id="myPopup">
+            <div>
+                <h3>Please Type Your Task First .</h3>
+                <div>
+                    <button type="button" id="myPopupBtn">Okay</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="confirmation-popup hide" id="confirmationPopup">
+        <div class="popup-content">
+            <h3>Are You Sure You Want To Delete This Task ?</h3>
+            <div>
+                <button type="button" id="confirmDeleteBtn">Yes</button>
+                <button type="button" id="cancelDeleteBtn">Cancel</button>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
